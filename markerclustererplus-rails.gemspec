@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.authors     = ["RogerE"]
   s.email       = ["roger@webfokus.no"]
   s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.summary     = "Use markerclustererplus with Rails Asset Pipeline"
+  s.description = "This gem provides the markerclustererplus assets for your Rails application."
 
   s.rubyforge_project = "markerclustererplus-rails"
 
