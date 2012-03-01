@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = Markerclustererplus::Rails::VERSION
   s.authors     = ["RogerE"]
   s.email       = ["roger@webfokus.no"]
-  s.homepage    = ""
+  s.homepage    = "https://github.com/RogerE/markerclustererplus-rails"
   s.summary     = "Use MarkerClustererPlus with Rails Asset Pipeline"
   s.description = "This gem provides the MarkerClustererPlus assets for your Rails application."
 
