@@ -26,6 +26,12 @@
  */
 
 /**
+ * This file modified for use with the Rails asset pipeline
+ * https://github.com/RogerE/markerclustererplus-rails
+ * @author Roger Ertesvag
+ */
+
+/**
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -736,7 +742,6 @@ MarkerClusterer.prototype.draw = function () {};
 
 /**
  * Sets up the styles object.
- */
 MarkerClusterer.prototype.setupStyles_ = function () {
   var i, size;
   if (this.styles_.length > 0) {
@@ -747,6 +752,30 @@ MarkerClusterer.prototype.setupStyles_ = function () {
     size = this.imageSizes_[i];
     this.styles_.push({
       url: this.imagePath_ + (i + 1) + "." + this.imageExtension_,
+      height: size,
+      width: size
+    });
+  }
+};
+ */
+
+
+/**
+ * Sets up the styles object.
+ */
+MarkerClusterer.prototype.setupStyles_ = function () {
+  var i, size;
+  if (this.styles_.length > 0) {
+    return;
+  }
+
+  var icons = ['<%= asset_path 'markerclusterer/m1.png' %>', '<%= asset_path 'markerclusterer/m2.png' %>', '<%= asset_path 'markerclusterer/m3.png' %>', '<%= asset_path 'markerclusterer/m4.png' %>', '<%= asset_path 'markerclusterer/m5.png' %>'];
+  var sizes = [53, 56, 66, 78, 90];
+
+  for (i = 0; i < icons.length; i++) {
+    size = sizes[i];
+    this.styles_.push({
+      url: icons[i],
       height: size,
       width: size
     });
