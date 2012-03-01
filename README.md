@@ -15,6 +15,6 @@ In your Gemfile, add this line:
 
 You can include it by adding the following to your javascript file:
 
-    //= require markerclustererplus
+    //= require markerclusterer
 
 You're done!
