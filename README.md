@@ -11,7 +11,7 @@ For info on how to use the library see the original documentation:
 
 In your Gemfile, add this line:
 
-    gem "markerclustererplus-rails"
+    gem 'markerclustererplus-rails'
 
 You can include it by adding the following to your javascript file:
 
