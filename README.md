@@ -17,4 +17,13 @@ You can include it by adding the following to your javascript file:
 
     //= require markerclusterer
 
-You're done!
+## Limitations
+
+Note that to include the MarkerClustererPlus icons in the asset pipeline we override the original configuration for setting the icon properties. This means that changing the following properties will not have any effect when using this gem:
+
+* imageExtension
+* imagePath
+* imageSizes
+
+This should not be a problem since the reason to using this gem in the first place is to include everything in the asset pipeline. Should you for some reason want to get the icons from somewhere else it should be possible to override this with the 'styles' property, although we have not tested this ourself.
+
