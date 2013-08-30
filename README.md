@@ -19,6 +19,8 @@ You can include it by adding the following to your javascript file:
 
     //= require markerclusterer
 
+The gem is Rails 4 compatible from version 2.0.15.2 and up.
+
 ## Limitations
 
 Note that to include the MarkerClustererPlus icons in the asset pipeline we override the original configuration for setting the icon properties. This means that changing the following properties will not have any effect when using this gem:

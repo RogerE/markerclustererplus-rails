@@ -1,5 +1,5 @@
 module Markerclustererplus
   module Rails
-    VERSION = "2.0.15.1"
+    VERSION = "2.0.15.2"
   end
 end
