@@ -31,7 +31,6 @@ Note that to include the MarkerClustererPlus icons in the asset pipeline we over
 
 * imageExtension
 * imagePath
-* imageSizes
 
 This should not be a problem since the reason to using this gem in the first place is to include everything in the asset pipeline. Should you for some reason want to get the icons from somewhere else it should be possible to override this with the 'styles' property, although we have not tested this ourself.
 

@@ -28,7 +28,14 @@
 /**
  * This file modified for use with the Rails asset pipeline
  * https://github.com/RogerE/markerclustererplus-rails
+ * gem markerclustererplus-rails
+ * gem version 2.0.16.1
  * @author Roger Ertesvag
+ * NOTE: to include the MarkerClustererPlus icons in the asset pipeline the gem overrides
+ *       the original configuration for setting the icon properties. This means that changing
+ *       the following properties will not have any effect when using the gem:
+ *          imageExtension
+ *          imagePath
  */
 
 /**
@@ -812,8 +819,13 @@ MarkerClusterer.prototype.draw = function () {};
 
 /**
  * Sets up the styles object.
+ */
 MarkerClusterer.prototype.setupStyles_ = function () {
   var i, size;
+  // START rails modification
+  var icons = ['<%= asset_path 'markerclusterer/m1.png' %>', '<%= asset_path 'markerclusterer/m2.png' %>', '<%= asset_path 'markerclusterer/m3.png' %>', '<%= asset_path 'markerclusterer/m4.png' %>', '<%= asset_path 'markerclusterer/m5.png' %>'];
+  // END rails modification
+
   if (this.styles_.length > 0) {
     return;
   }
@@ -821,31 +833,12 @@ MarkerClusterer.prototype.setupStyles_ = function () {
   for (i = 0; i < this.imageSizes_.length; i++) {
     size = this.imageSizes_[i];
     this.styles_.push({
+      // START rails modification
+      url: MarkerClusterer.IMAGE_HOST + 'assets' + icons[i].split('assets').slice(-1)[0],
+      /*
       url: this.imagePath_ + (i + 1) + "." + this.imageExtension_,
-      height: size,
-      width: size
-    });
-  }
-};
- */
-
-
-/**
- * Sets up the styles object.
- */
-MarkerClusterer.prototype.setupStyles_ = function () {
-  var i, size;
-  if (this.styles_.length > 0) {
-    return;
-  }
-
-  var icons = ['<%= asset_path 'markerclusterer/m1.png' %>', '<%= asset_path 'markerclusterer/m2.png' %>', '<%= asset_path 'markerclusterer/m3.png' %>', '<%= asset_path 'markerclusterer/m4.png' %>', '<%= asset_path 'markerclusterer/m5.png' %>'];
-  var sizes = [53, 56, 66, 78, 90];
-
-  for (i = 0; i < icons.length; i++) {
-    size = sizes[i];
-    this.styles_.push({
-      url: icons[i],
+      */
+      // END rails modification
       height: size,
       width: size
     });
@@ -1671,3 +1664,10 @@ MarkerClusterer.IMAGE_EXTENSION = "png";
  * @constant
  */
 MarkerClusterer.IMAGE_SIZES = [53, 56, 66, 78, 90];
+
+// START rails modification
+// get host js file is served from
+var scriptList = document.getElementsByTagName('script');
+var thisScriptSource=scriptList[scriptList.length-1].getAttribute("src");
+MarkerClusterer.IMAGE_HOST = thisScriptSource.split('assets')[0];
+// END rails modification
