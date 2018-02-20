@@ -1,13 +1,18 @@
 # MarkerClustererPlus for Rails
 
-This gem vendors the MarkerClustererPlus assets for Rails 3.1 and greater.
+MarkerClustererPlus is an enhanced Google Maps V3 implementation of the V2 MarkerClusterer.
+
+This gem vendors the MarkerClustererPlus assets for Rails.
 The files will be added to the asset pipeline and available for you to use.
+
+The original source can be found here:
+
+[MarkerClustererPlus for Google Maps V3](https://github.com/googlemaps/v3-utility-library/tree/master/markerclustererplus)
 
 For info on how to use the library see the original documentation:
 
-[MarkerClustererPlus for Google Maps V3](https://htmlpreview.github.io/?https://github.com/googlemaps/v3-utility-library/blob/master/markerclustererplus/docs/reference.html)
+[MarkerClustererPlus reference](https://htmlpreview.github.io/?https://github.com/googlemaps/v3-utility-library/blob/master/markerclustererplus/docs/reference.html)
 
-MarkerClustererPlus is an enhanced Google Maps V3 implementation of the V2 MarkerClusterer.
 
 ## Installation
 
@@ -22,8 +27,6 @@ You can include it by adding the following to your javascript application file:
 ```javascript
 //= require markerclusterer
 ```
-
-The gem is Rails 4 compatible from version 2.0.15.2 and up.
 
 ## Limitations
 
