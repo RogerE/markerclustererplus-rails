@@ -1,4 +1,8 @@
-# MarkerClustererPlus for Rails
+# THIS GEM IS NO LONGER UPDATED
+
+If you require newer versions of the asset files you can download them from the [Github repository](https://github.com/googlemaps/v3-utility-library/tree/master/markerclustererplus).
+
+## Intro
 
 MarkerClustererPlus is an enhanced Google Maps V3 implementation of the V2 MarkerClusterer.
 
